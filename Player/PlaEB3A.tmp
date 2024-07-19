@@ -1,0 +1,122 @@
+[gd_scene load_steps=23 format=3 uid="uid://cdkrycflxire1"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_mwjhe"]
+[ext_resource type="Texture2D" uid="uid://ditu3qmgsqenj" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/hurt/Sprites/hurt-1.png" id="2_dm20x"]
+[ext_resource type="Texture2D" uid="uid://123hekhleqy2" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/hurt/Sprites/hurt-2.png" id="3_e0c7w"]
+[ext_resource type="Texture2D" uid="uid://kb7fsoqhwrj" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/idle/Sprites/idle-1.png" id="4_kpr5r"]
+[ext_resource type="Texture2D" uid="uid://b2r1niktmj4v7" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/idle/Sprites/idle-2.png" id="5_vo2ey"]
+[ext_resource type="Texture2D" uid="uid://cqrlq4vj1gr3m" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/idle/Sprites/idle-3.png" id="6_6vo75"]
+[ext_resource type="Texture2D" uid="uid://c74oi2bhvc4tq" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/idle/Sprites/idle-4.png" id="7_vr2uj"]
+[ext_resource type="Texture2D" uid="uid://7rbg4hmw1bxx" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/jump/Sprites/jump-1.png" id="8_1m8ym"]
+[ext_resource type="Texture2D" uid="uid://dvcwfvauqqvt" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/jump/Sprites/jump-2.png" id="9_58h3n"]
+[ext_resource type="Texture2D" uid="uid://ciuu0xf262ptg" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/jump/Sprites/jump-3.png" id="10_uj0i1"]
+[ext_resource type="Texture2D" uid="uid://dxg1gdquts0mp" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/jump/Sprites/jump-4.png" id="11_aybaj"]
+[ext_resource type="Texture2D" uid="uid://1ahdmw3ltfkh" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/jump/Sprites/jump-5.png" id="12_v1yqf"]
+[ext_resource type="Texture2D" uid="uid://dlflgf4w0dqg8" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-1.png" id="13_6swvk"]
+[ext_resource type="Texture2D" uid="uid://b4jjx66ujd7yv" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-2.png" id="14_ir66a"]
+[ext_resource type="Texture2D" uid="uid://vmw23ek8pi6c" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-3.png" id="15_2ieha"]
+[ext_resource type="Texture2D" uid="uid://c42rdgqnep311" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-4.png" id="16_jxlhh"]
+[ext_resource type="Texture2D" uid="uid://bvk68yb1feqay" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-5.png" id="17_jdwjl"]
+[ext_resource type="Texture2D" uid="uid://b6sb32utcbgxk" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-6.png" id="18_ukhaf"]
+[ext_resource type="Texture2D" uid="uid://bgp0lse7f544j" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-7.png" id="19_arwvu"]
+[ext_resource type="Texture2D" uid="uid://dqt3arjrao0mv" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-8.png" id="20_efm0b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0eq5h"]
+radius = 48.0
+height = 178.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0b2m8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dm20x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e0c7w")
+}],
+"loop": true,
+"name": &"Hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_kpr5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vo2ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6vo75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vr2uj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1m8ym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_58h3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uj0i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aybaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_v1yqf")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_6swvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ir66a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2ieha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jxlhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jdwjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ukhaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_arwvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_efm0b")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(91, 57)
+scale = Vector2(0.673182, 0.686822)
+script = ExtResource("1_mwjhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_0eq5h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4.16326, -8.92794)
+scale = Vector2(3.04072, 3.30876)
+sprite_frames = SubResource("SpriteFrames_0b2m8")
+animation = &"Idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
