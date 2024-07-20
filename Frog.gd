@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var SPEED = 10
+var SPEED = 100
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
 var chase = false
@@ -13,17 +13,18 @@ func _physics_process(delta):
 	if chase == true:
 		if get_node("AnimatedSprite2D").animation != "Death":
 			get_node("AnimatedSprite2D").play("Jump")
-			player = get_node("../../Player/Player")#path to the player
-				#get the direction of the player around frog
-			var direction = (player.position - self.position).normalized()
-
-			velocity.x = direction.x * SPEED
-			if direction.x > 0:
-				get_node("AnimatedSprite2D").flip_h = true
-			elif direction.x < 0:
-				get_node("AnimatedSprite2D").flip_h = false
-			else:
-				get_node("AnimatedSprite2D").play("Idle")
+		player = get_node("../../Player/Player")
+		var direction = (player.position - self.position).normalized()
+		print(direction)
+		print(player.position)
+		print(self.position)
+		if direction.x > 0:
+			get_node("AnimatedSprite2D").flip_h = true
+			print("Left")
+		elif direction.x < 0:
+			get_node("AnimatedSprite2D").flip_h = false
+			print("Right")
+		velocity.x = direction.x * SPEED
 			
 	else:
 		if get_node("AnimatedSprite2D").animation != "Death":
