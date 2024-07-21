@@ -4,6 +4,7 @@ var SPEED = 100
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
 var chase = false
+var squash = false
 
 func _ready():
 	get_node("AnimatedSprite2D").play("Idle")
@@ -21,7 +22,7 @@ func _physics_process(delta):
 		if direction.x > 0:
 			get_node("AnimatedSprite2D").flip_h = true
 			print("Left")
-		elif direction.x < 0:
+		else:
 			get_node("AnimatedSprite2D").flip_h = false
 			print("Right")
 		velocity.x = direction.x * SPEED
@@ -45,6 +46,8 @@ func _on_player_detection_body_exited(body):
 func _on_player_death_body_entered(body):
 	if body.name == "Player":
 		Game.Gold += 5
+		#bounce on frog head
+		body.velocity.y *= -1
 		death()
 
 func _on_player_collision_body_entered(body):
