@@ -49,3 +49,8 @@ func _physics_process(delta):
 		Game.playerHp = Game.HP
 		Game.Gold = Game.G
 		get_tree().change_scene_to_file("res://lobby.tscn")
+
+
+func _on_area_2d_body_entered(body):
+	if body.name == "Frog":
+		anim.play("Hurt")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cdkrycflxire1"]
+[gd_scene load_steps=31 format=3 uid="uid://cdkrycflxire1"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_mwjhe"]
 [ext_resource type="Texture2D" uid="uid://ditu3qmgsqenj" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/hurt/Sprites/hurt-1.png" id="2_dm20x"]
@@ -22,8 +22,8 @@
 [ext_resource type="Texture2D" uid="uid://dqt3arjrao0mv" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/run/Sprites/run-8.png" id="20_efm0b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0eq5h"]
-radius = 14.8548
-height = 52.4153
+radius = 17.8259
+height = 46.5913
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0b2m8"]
 animations = [{
@@ -242,10 +242,14 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
+[sub_resource type="Animation" id="Animation_c4df2"]
+resource_name = "Hurt"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5orwn"]
 _data = {
 "Death": SubResource("Animation_osu1o"),
 "Fall": SubResource("Animation_n4mp3"),
+"Hurt": SubResource("Animation_c4df2"),
 "Idle": SubResource("Animation_xwufg"),
 "Jump": SubResource("Animation_8lkrh"),
 "RESET": SubResource("Animation_5cemc"),
@@ -257,15 +261,19 @@ position = Vector2(89, 46)
 scale = Vector2(0.673182, 0.686822)
 script = ExtResource("1_mwjhe")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-132.208, -65.5191)
+scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_0eq5h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-132.208, -87.3588)
 scale = Vector2(1.83788, 2.13757)
 sprite_frames = SubResource("SpriteFrames_0b2m8")
-animation = &"Jump"
+animation = &"Hurt"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -280,3 +288,5 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
