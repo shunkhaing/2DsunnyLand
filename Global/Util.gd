@@ -9,6 +9,8 @@ func saveGame():
 	var data = {
 		"playerHp": Game.playerHp,
 		"Gold": Game.Gold,
+		"playerX": Game.playerX,
+		"playerY": Game.playerY
 	}
 	
 	var jstr = JSON.stringify(data) #take the Dictionary and stringisy it
@@ -22,3 +24,5 @@ func loadGame():
 			if current_line:
 				Game.playerHp = current_line["playerHp"]
 				Game.Gold = current_line["Gold"]
+				Game.playerX = current_line["playerX"]
+				Game.playerY = current_line["playerY"]

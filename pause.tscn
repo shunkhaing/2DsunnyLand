@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://bui3kub5bxasc"]
+
+[ext_resource type="Script" path="res://pause.gd" id="1_llpj6"]
+[ext_resource type="PackedScene" uid="uid://dngowrexckwun" path="res://bg.tscn" id="2_504sh"]
+[ext_resource type="Texture2D" uid="uid://j806roiok67b" path="res://sunny-land-phaser-project/sunny-land/assets/sprites/title-screen.png" id="3_tnoq4"]
+[ext_resource type="Texture2D" uid="uid://ddraup5qg065" path="res://sunny-land-phaser-project/sunny-land/assets/sprites/credits-text.png" id="4_y2bct"]
+
+[node name="pause" type="Node2D"]
+script = ExtResource("1_llpj6")
+
+[node name="Resume" type="Button" parent="."]
+offset_left = 456.0
+offset_top = 222.0
+offset_right = 695.0
+offset_bottom = 354.0
+scale = Vector2(0.843317, 0.777692)
+text = "Resume"
+
+[node name="Restart" type="Button" parent="."]
+offset_left = 456.0
+offset_top = 353.0
+offset_right = 657.0
+offset_bottom = 457.0
+scale = Vector2(0.996819, 1)
+text = "Restart"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 456.0
+offset_top = 487.0
+offset_right = 694.0
+offset_bottom = 620.0
+scale = Vector2(0.848134, 0.772615)
+text = "Quit"
+
+[node name="BG" parent="." instance=ExtResource("2_504sh")]
+
+[node name="Title-screen" type="Sprite2D" parent="."]
+position = Vector2(583, 123)
+scale = Vector2(2.51546, 3.23684)
+texture = ExtResource("3_tnoq4")
+
+[node name="Credits-text" type="Sprite2D" parent="."]
+position = Vector2(120, 624)
+scale = Vector2(1.25806, 1.5625)
+texture = ExtResource("4_y2bct")
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

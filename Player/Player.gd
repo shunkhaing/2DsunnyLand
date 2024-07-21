@@ -7,9 +7,12 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
+var playerPositionX = position.x
+var playerPositionY = position.y
 
 func _ready():
 	anim.play("Idle")
+	print(position)
 	
 func _physics_process(delta):
 	# Add the gravity.
@@ -52,5 +55,7 @@ func _physics_process(delta):
 
 
 func _on_area_2d_body_entered(body):
+	print("Outside")
 	if body.name == "Frog":
-		anim.play("Hurt")
+		get_node("AnimatedSprite2D").play("Hurt")
+		print("WORKS")

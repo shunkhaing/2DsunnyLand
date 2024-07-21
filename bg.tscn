@@ -9,10 +9,10 @@ script = ExtResource("1_omaor")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.7, 0.7)
-motion_mirroring = Vector2(2304, 0)
+motion_mirroring = Vector2(3455, 0)
 
 [node name="Sky" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(576, 324)
+position = Vector2(577, 320)
 scale = Vector2(2.76923, 2.53125)
 texture = ExtResource("2_6mjk3")
 
@@ -21,16 +21,16 @@ position = Vector2(1728, 320)
 scale = Vector2(2.76923, 2.53125)
 texture = ExtResource("2_6mjk3")
 
+[node name="Sky3" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(2880, 321)
+scale = Vector2(2.76923, 2.53125)
+texture = ExtResource("2_6mjk3")
+
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(2047, 0)
+motion_mirroring = Vector2(2559, 0)
 
 [node name="Mountains" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(256, 460)
-scale = Vector2(2.46154, 2.49007)
-texture = ExtResource("3_fge4p")
-
-[node name="Mountains5" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(4350, 456)
 scale = Vector2(2.46154, 2.49007)
 texture = ExtResource("3_fge4p")
 
@@ -46,5 +46,10 @@ texture = ExtResource("3_fge4p")
 
 [node name="Mountains4" type="Sprite2D" parent="ParallaxLayer2"]
 position = Vector2(1791, 460)
+scale = Vector2(2.46154, 2.49007)
+texture = ExtResource("3_fge4p")
+
+[node name="Mountains5" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(2303, 460)
 scale = Vector2(2.46154, 2.49007)
 texture = ExtResource("3_fge4p")

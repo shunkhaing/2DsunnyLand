@@ -17,14 +17,10 @@ func _physics_process(delta):
 		player = get_node("../../Player/Player")
 		var direction = (player.position - self.position).normalized()
 		print(direction)
-		print(player.position)
-		print(self.position)
 		if direction.x > 0:
 			get_node("AnimatedSprite2D").flip_h = true
-			print("Left")
 		else:
 			get_node("AnimatedSprite2D").flip_h = false
-			print("Right")
 		velocity.x = direction.x * SPEED
 			
 	else:
@@ -54,6 +50,7 @@ func _on_player_collision_body_entered(body):
 	if body.name == "Player":
 		Game.playerHp -= 3
 		death()
+
 		
 func death():
 		Util.saveGame()
