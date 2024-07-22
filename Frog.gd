@@ -53,6 +53,8 @@ func _on_player_collision_body_entered(body):
 
 		
 func death():
+		Game.playerX = player.position.x 
+		Game.playerY = player.position.y
 		Util.saveGame()
 		print(Game.playerHp)
 		chase = false

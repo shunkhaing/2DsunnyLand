@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var anim = get_node("AnimationPlayer")
 var playerPositionX = position.x
-var playerPositionY = position.y
+var playerPositionY = position.y                                                           
 
 func _ready():
 	anim.play("Idle")

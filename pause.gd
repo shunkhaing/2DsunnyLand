@@ -3,6 +3,8 @@ extends Node2D
 
 func _on_resume_pressed():
 	get_tree().change_scene_to_file("res://world.tscn")
+	Game.playerX = Game.playerX
+	Game.playerY = Game.playerY
 
 
 func _on_restart_pressed():
