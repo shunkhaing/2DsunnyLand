@@ -5,27 +5,27 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var player
 var chase = false
 var squash = false
+@onready var anim2d = get_node("AnimatedSprite2D")
 
 func _ready():
-	get_node("AnimatedSprite2D").play("Idle")
+	anim2d.play("Idle")
 
 func _physics_process(delta):
 	velocity.y += gravity * delta #add the gravity
 	if chase == true:
-		if get_node("AnimatedSprite2D").animation != "Death":
-			get_node("AnimatedSprite2D").play("Jump")
+		if anim2d.animation != "Death":
+			anim2d.play("Jump")
 		player = get_node("../../Player/Player")
 		var direction = (player.position - self.position).normalized()
-		print(direction)
 		if direction.x > 0:
-			get_node("AnimatedSprite2D").flip_h = true
+			anim2d.flip_h = true
 		else:
-			get_node("AnimatedSprite2D").flip_h = false
+			anim2d.flip_h = false
 		velocity.x = direction.x * SPEED
 			
 	else:
-		if get_node("AnimatedSprite2D").animation != "Death":
-			get_node("AnimatedSprite2D").play("Idle")
+		if anim2d.animation != "Death":
+			anim2d.play("Idle")
 		velocity.x = 0;
 	move_and_slide()
 
@@ -58,6 +58,6 @@ func death():
 		Util.saveGame()
 		print(Game.playerHp)
 		chase = false
-		get_node("AnimatedSprite2D").play("Death")
-		await get_node("AnimatedSprite2D").animation_finished
+		anim2d.play("Death")
+		await anim2d.animation_finished
 		self.queue_free()
