@@ -40,24 +40,24 @@ func _on_player_detection_body_exited(body):
 
 
 func _on_player_death_body_entered(body):
-        if body.name == "Player":
-                Game.Gold += 5
-                # bounce on frog head
-                body.velocity.y *= -1
-                death(body)
+	if body.name == "Player":
+		Game.Gold += 5
+		#bounce on frog head
+		body.velocity.y *= -1
+		death()
 
 func _on_player_collision_body_entered(body):
-        if body.name == "Player":
-                Game.playerHp -= 3
-                death(body)
+	if body.name == "Player":
+		Game.playerHp -= 3
+		death()
 
 		
-func death(hit_player):
-                Game.playerX = hit_player.position.x
-                Game.playerY = hit_player.position.y
-                Util.saveGame()
-                print(Game.playerHp)
-                chase = false
-                anim2d.play("Death")
-                await anim2d.animation_finished
-                self.queue_free()
+func death():
+		Game.playerX = player.position.x 
+		Game.playerY = player.position.y
+		Util.saveGame()
+		print(Game.playerHp)
+		chase = false
+		anim2d.play("Death")
+		await anim2d.animation_finished
+		self.queue_free()

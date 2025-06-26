@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bui3kub5bxasc"]
 
-[ext_resource type="Script" path="res://pause.gd" id="1_llpj6"]
+[ext_resource type="Script" uid="uid://dakwsliaqdmyc" path="res://pause.gd" id="1_llpj6"]
 [ext_resource type="PackedScene" uid="uid://dngowrexckwun" path="res://bg.tscn" id="2_504sh"]
 [ext_resource type="Texture2D" uid="uid://j806roiok67b" path="res://sunny-land-phaser-project/sunny-land/assets/sprites/title-screen.png" id="3_tnoq4"]
 [ext_resource type="Texture2D" uid="uid://ddraup5qg065" path="res://sunny-land-phaser-project/sunny-land/assets/sprites/credits-text.png" id="4_y2bct"]

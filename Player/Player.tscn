@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://cdkrycflxire1"]
 
-[ext_resource type="Script" path="res://Player/Player.gd" id="1_mwjhe"]
+[ext_resource type="Script" uid="uid://dqe61k7e031pq" path="res://Player/Player.gd" id="1_mwjhe"]
 [ext_resource type="Texture2D" uid="uid://ditu3qmgsqenj" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/hurt/Sprites/hurt-1.png" id="2_dm20x"]
 [ext_resource type="Texture2D" uid="uid://123hekhleqy2" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/hurt/Sprites/hurt-2.png" id="3_e0c7w"]
 [ext_resource type="Texture2D" uid="uid://kb7fsoqhwrj" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Winter Pack/SPRITES/player/idle/Sprites/idle-1.png" id="4_kpr5r"]
@@ -276,13 +276,13 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5orwn"]
 _data = {
-"Death": SubResource("Animation_osu1o"),
-"Fall": SubResource("Animation_n4mp3"),
-"Hurt": SubResource("Animation_c4df2"),
-"Idle": SubResource("Animation_xwufg"),
-"Jump": SubResource("Animation_8lkrh"),
-"RESET": SubResource("Animation_5cemc"),
-"Run": SubResource("Animation_s8lmh")
+&"Death": SubResource("Animation_osu1o"),
+&"Fall": SubResource("Animation_n4mp3"),
+&"Hurt": SubResource("Animation_c4df2"),
+&"Idle": SubResource("Animation_xwufg"),
+&"Jump": SubResource("Animation_8lkrh"),
+&"RESET": SubResource("Animation_5cemc"),
+&"Run": SubResource("Animation_s8lmh")
 }
 
 [node name="Player" type="CharacterBody2D"]

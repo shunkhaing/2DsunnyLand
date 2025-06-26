@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://8srkfqbgck3p"]
 
-[ext_resource type="Script" path="res://Frog.gd" id="1_4jlev"]
+[ext_resource type="Script" uid="uid://db8a330k0hf1p" path="res://Frog.gd" id="1_4jlev"]
 [ext_resource type="Texture2D" uid="uid://dvbgg4ausmxq8" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/frog/idle/frog-idle-1.png" id="1_ijvvg"]
 [ext_resource type="Texture2D" uid="uid://cfuqbfbfoax1n" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/enemy-death/enemy-death-1.png" id="2_5ru12"]
 [ext_resource type="Texture2D" uid="uid://d2dph3velvi7b" path="res://Sunny Land Collection Files/Sunny Land Collection Files/Assets/Packs/Sunnyland/sprites/frog/idle/frog-idle-2.png" id="2_sxey0"]
